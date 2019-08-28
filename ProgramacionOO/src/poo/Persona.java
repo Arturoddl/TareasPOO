@@ -17,14 +17,29 @@ public class Persona {
     public double estatura;
     public double peso;
     public String sexo;
-    
-    //métodos
-    public Persona(String nombre,
-                    int edad, 
-                    double estatura,
-                    double peso,
-                    String sexo){
+    public String getNombre(){
         
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public double getEstatura() {
+        return estatura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    //métodos
+    public String getSexo() {
+        return sexo;
+    }
+
+    public Persona(String nombre, int edad, double estatura, double peso, String sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.estatura = estatura;

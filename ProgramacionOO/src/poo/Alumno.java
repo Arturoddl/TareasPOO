@@ -9,43 +9,43 @@ package poo;
  *
  * @author usuario
  */
-public class Alumno {
+public class Alumno extends Persona {
     private int boleta;
-    private String nombre;
     private String contraseña;
-    
-    public Alumno(){
-        this.boleta = 0;
-        this.nombre = "";
-        this.contraseña = "";    
-    }
-    
-    public Alumno(int boleta, String nombre, String contraseña){
+
+    public Alumno(int boleta, String contraseña, String nombre, int edad, double estatura, double peso, String sexo) {
+        super(nombre, edad, estatura, peso, sexo);
         this.boleta = boleta;
         this.nombre = nombre;
         this.contraseña = contraseña;
-        
+    }
+
+    public int getBoleta() {
+        return boleta;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public double getEstatura() {
+        return estatura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public String getSexo() {
+        return sexo;
     }
     
-    public int getBoleta(){
-        return this.boleta;
     }
-    
-    public String getNombre(){
-        return this.nombre;
-    }
-    
-    public String getContraseña(){
-        return this.contraseña;
-    }
-    
-    public void setBoleta(int boleta){
-        this.boleta = boleta;
-    }
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    public void setContraseña(String contraseña){
-        this.contraseña = contraseña;
-    }
-}

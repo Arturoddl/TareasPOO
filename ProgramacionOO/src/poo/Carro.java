@@ -5,14 +5,46 @@
  */
 package poo;
 
+import java.util.Objects;
+
 /**
  *
  * @author usuario
  */
 public class Carro {
+
+    @Override
+    public String toString() {
+        return "Carro{" + "color=" + color + ", peso=" + peso + ", tama\u00f1o=" + tamaño + '}';
+    }
     private String color;
     private double peso;
     private double tamaño;
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + Objects.hashCode(this.color);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Carro other = (Carro) obj;
+        if (!Objects.equals(this.color, other.color)) {
+            return false;
+        }
+        return true;
+    }
     
     public Carro(){
         this.color = "";

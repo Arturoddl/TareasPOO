@@ -29,7 +29,7 @@ import poo.Videojuego;
 
 /**
  *
- * @author usuario
+ * @author Arturo del Bosque Díaz de León
  */
 public class ProgramacionOO {
 

@@ -10,8 +10,8 @@ package poo;
  * @author usuario
  */
 public class Alumno extends Persona {
-    private int boleta;
-    private String contraseña;
+    private final int boleta;
+    private final String contraseña;
 
     public Alumno(int boleta, String contraseña, String nombre, int edad, double estatura, double peso, String sexo) {
         super(nombre, edad, estatura, peso, sexo);
@@ -27,23 +27,23 @@ public class Alumno extends Persona {
     public String getContraseña() {
         return contraseña;
     }
-
+@Override
     public String getNombre() {
         return nombre;
     }
-
+@Override
     public int getEdad() {
         return edad;
     }
-
+@Override
     public double getEstatura() {
         return estatura;
     }
-
+@Override
     public double getPeso() {
         return peso;
     }
-
+@Override
     public String getSexo() {
         return sexo;
     }
